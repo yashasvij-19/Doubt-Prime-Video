@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300&display=swap');
+
+.home-first-image{
+    background-image: linear-gradient( to right, #000 40%, transparent 58% ),url("https://m.media-amazon.com/images/G/31/AmazonVideo/2019/MLP.jpg");
+    background-size: cover;
+    height: 700px;
+    width:100%;
+    position: absolute;
+    top:47px;
+    left:0%;
+    right: 0%;
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-color: #000;
+}
+
+.home-welcome{
+    color: white;
+    margin-left: 2%;
+    margin-top: 2%;
+    font-size: 2rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.home-welcome p{
+    font-size: 1.6rem;
+}
+
+.home-welcome Button{
+    font-family: 'Inter', sans-serif;
+    font-weight: bolder;
+    padding:10px;
+    width: 50%;
+}
+.youth-offers{
+    background-image: linear-gradient(to left, #000 40%, transparent 58%), url("https://m.media-amazon.com/images/G/31/AmazonVideo/MLP/Youth-Offer_24Jun._CB633858317_.jpg");
+    background-size: contain;
+    height: 500px;
+    width:100%;
+    position: relative;
+    top:700px;
+    background-repeat: no-repeat;
+    background-color: #000;
+}
