@@ -1,0 +1,86 @@
+.carousel-root {
+  margin-top: 50px;
+}
+.carousel .slide img {
+  width: 100%;
+  vertical-align: top;
+  height: 500px;
+  border: 0;
+}
+.carousel .carousel-status {
+  display: none;
+}
+.carousel .thumbs {
+  display: none;
+}
+#detailSection {
+  color: white;
+  width: 300px;
+  height: 250px;
+  position: relative;
+  top: 15%;
+  left: 10%;
+  font-size: larger;
+  font-weight: bold;
+}
+#detailSection p {
+  cursor: pointer;
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  padding: 10px;
+}
+#detailSection img {
+  width: 300px;
+  height: 230px;
+  cursor: pointer;
+}
+#detailSection i {
+  font-size: 50px;
+  cursor: pointer;
+}
+#mainDiv {
+  height: 600px;
+  background-image: url("https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_RockyAurRani/2f5966b6-9c75-4ee8-b712-e4c9f1da677a._UR3840,1440_SX3840_FMwebp_.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 600px;
+}
+#mainDiv1 {
+  background-image: url("https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_Jailer/c5c13db2-b75b-4c2f-b341-22f92cc0e0d9._UR3840,1440_SX2880_FMjpg_.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 600px;
+  height: 600px;
+}
+#mainDiv2 {
+  background-image: url("https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_Neeyat_Refresh/daec5cb6-8e43-47eb-9940-58ec7d78cad4._UR3840,1440_SX2880_FMjpg_.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 600px;
+  height: 600px;
+}
+#mainDiv3 {
+  background-repeat: no-repeat;
+  background-size: 100% 600px;
+  height: 600px;
+  background-image: url("https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_SatyapremKiKatha_Refresh/ff6d2402-5f20-45c4-b64e-9e85772b6566._UR3840,1440_SX2880_FMjpg_.jpeg");
+}
+#mainDiv4 {
+  background-image: url("https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_Pizza3TheMummy/4137b0fa-ef82-4451-93b5-1067b8374621._UR3840,1440_SX2880_FMjpg_.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 600px;
+  height: 600px;
+}
+#mainDiv5{
+    background-image: url("https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_Maaveeran_SH/7f7151e4-a8fb-4a4b-9741-896b52ced9fd._UR3840,1440_SX2880_FMjpg_.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 600px;
+    height: 600px;
+}
+#mainDiv5 #detailSection img{
+    height: 150px;
+}
+#mainDiv6{
+    background-image: url("https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_Spy/1bd4e354-1550-4f77-a065-04ef08f32c44._UR3840,1440_SX2880_FMjpg_.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 500px;
+    height: 500px;
+}

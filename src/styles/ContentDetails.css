@@ -1,0 +1,16 @@
+.contentDetails{
+    margin-top: 50px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 50%, transparent 100%),
+              url("https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/736a0e6f337c77d954e77dd9db3093fa9c43e484ce5fca9f3a1303b91e0c33a0._RI_TTW_SX1920_FMwebp_.jpg");
+  background-size: 100% 800px;
+  background-repeat: no-repeat;
+  color: white;
+  height: 800px;
+  width: 100%;
+}
+.textContent{
+    margin-left: 5%;
+    position: relative;
+    top: 13%;
+    font-size: x-large;
+}

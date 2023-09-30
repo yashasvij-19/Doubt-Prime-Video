@@ -1,0 +1,67 @@
+*{
+   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.login{
+   margin-left: 37%;
+}
+.theLogo img{
+    margin: 2% 0% 2% 10%;
+}
+.theBox{
+    border:1px solid #ddd;
+    border-radius: 5px;
+    width:350px;
+    height: 460px;
+    padding: 20px;
+}
+.theBox h3{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.theBox label{
+    font-weight: 550;
+    font-size: 16px;
+}
+.theBox input{
+    height: 20px;
+    width: 97%;
+    margin: 10px 0px 10px 0px;
+}
+.theBox Button{
+width: 100%;
+background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
+color: black;
+font-size: 14px;
+}
+.theBox button+p{
+    font-size: small;
+}
+#condition, .needHelp{
+    color:rgb(0, 123, 255);
+    text-decoration: none;
+}
+#condition:hover, .needHelp:hover{
+color:orange;
+text-decoration: underline;
+}
+hr{
+    width:99%;
+    background-color: black;
+    height: 0px;
+    position: absolute;
+    top:85%;
+    left: 0%;
+    right: 0%;
+}
+
+.foot{
+    margin-top: 6%;
+}
+.foot-first a{
+    color:#575757;
+    text-decoration: none;
+}
+.foot p{
+    margin-left: 50px;
+    font-size: 14px;
+}

@@ -1,33 +1,50 @@
 import React from "react";
-import { useState } from "react";
 import "../styles/Navbar.css";
-import Box from "@mui/material/Box";
-import Popper from "@mui/material/Popper";
-import { styled } from "@mui/material/styles";
+import AccountMenu from "./AccountMenu";
+import MenuHome from "./MenuHome";
+import MenuCat from "./MenuCat";
+import SearchIcon from "@mui/icons-material/Search";
+import { styled, alpha } from "@mui/material/styles";
+import InputBase from "@mui/material/InputBase";
 
 const Navbar = () => {
-  const [anchorEl, setAnchorEl] = useState(null);
+  const Search = styled("div")(({ theme }) => ({
+    position: "relative",
+    borderRadius: theme.shape.borderRadius,
+    backgroundColor: alpha(theme.palette.common.white, 0.15),
+    "&:hover": {
+      backgroundColor: alpha(theme.palette.common.white, 0.25),
+    },
+    marginRight: theme.spacing(2),
+    marginLeft: 0,
+    width: "100%",
+    [theme.breakpoints.up("sm")]: {
+      marginLeft: theme.spacing(3),
+      width: "35ch",
+    },
+  }));
 
-  const handleClick = (event) => {
-    setAnchorEl(anchorEl ? null : event.currentTarget);
-  };
-
-  const handleClick1 = () => {
-    setAnchorEl(null);
-  };
-
-  const open = Boolean(anchorEl);
-  const id = open ? "simple-popper" : undefined;
-
-  const DialogBox = styled(Box)({
-    position: "static",
-    borderRadius: "8px",
-    backgroundColor: "#191e25",
-    boxShadow: "0 4px 8px 2px rgba(0,5,13,.5)",
-    minWidth: "10%",
-    zIndex: "3",
-    padding: "3px",
-  });
+  const SearchIconWrapper = styled("div")(({ theme }) => ({
+    padding: theme.spacing(0, 2),
+    height: "100%",
+    position: "absolute",
+    pointerEvents: "none",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  }));
+  const StyledInputBase = styled(InputBase)(({ theme }) => ({
+    color: "inherit",
+    "& .MuiInputBase-input": {
+      padding: theme.spacing(1, 1, 1, 0),
+      paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+      transition: theme.transitions.create("width"),
+      width: "100%",
+      [theme.breakpoints.up("md")]: {
+        width: "20ch",
+      },
+    },
+  }));
 
   return (
     <div className="navbar-main">
@@ -41,40 +58,44 @@ const Navbar = () => {
             />
           </a>
         </div>
-        <div>
-          <ul className="ul-links">
-            <li aria-describedby={id} onMouseOver={handleClick}>
-              Home &nbsp;<i className="fas fa-angle-down"></i>
-            </li>
-            <Popper id={id} open={open} anchorEl={anchorEl}>
-              <DialogBox>
-                <ul className="home-links" onMouseOver={handleClick1}>
-                  <li>All</li>
-                  <li>Movies</li>
-                  <li>TV Shows</li>
-                </ul>
-              </DialogBox>
-            </Popper>
-            <li aria-describedby={id} onMouseOver={handleClick}>
-              Store &nbsp;<i className="fas fa-angle-down"></i>
-            </li>
-            <Popper id={id} open={open} anchorEl={anchorEl}>
-              <DialogBox>
-                <ul className="home-links">
-                  <li>All</li>
-                  <li>Movies</li>
-                  <li>TV Shows</li>
-                </ul>
-              </DialogBox>
-            </Popper>
-            <li>LiveTv</li>
+        <div className="nav-list">
+          <ul>
             <li>
-              Categories &nbsp;&nbsp; <i className="fas fa-angle-down"></i>
+              <MenuHome
+                title={"Home"}
+                opt={"All"}
+                optTwo={"Movies"}
+                optThree={"TV Shows"}
+              />
+            </li>
+            <li>
+              <MenuHome
+                title={"Store"}
+                opt={"All"}
+                optTwo={"Rent"}
+                optThree={"Channels"}
+              />
+            </li>
+            <li className="noOption">LiveTV</li>
+            <li>
+              <MenuCat />
+            </li>
+            <li id="searchList">
+              {" "}
+              <Search>
+                <SearchIconWrapper>
+                  <SearchIcon />
+                </SearchIconWrapper>
+                <StyledInputBase
+                  placeholder="Search…"
+                  inputProps={{ "aria-label": "search" }}
+                />
+              </Search>
             </li>
           </ul>
+          <AccountMenu />
         </div>
       </div>
-      <div className="navbar-profile"></div>
     </div>
   );
 };

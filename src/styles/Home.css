@@ -1,44 +1,150 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300&display=swap');
-
-.home-first-image{
-    background-image: linear-gradient( to right, #000 40%, transparent 58% ),url("https://m.media-amazon.com/images/G/31/AmazonVideo/2019/MLP.jpg");
-    background-size: cover;
-    height: 700px;
-    width:100%;
-    position: absolute;
-    top:47px;
-    left:0%;
-    right: 0%;
-    background-position: right top;
-    background-repeat: no-repeat;
-    background-color: #000;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300&display=swap");
+body {
+  margin: 0;
 }
 
-.home-welcome{
-    color: white;
-    margin-left: 2%;
-    margin-top: 2%;
-    font-size: 2rem;
-    font-family: 'Inter', sans-serif;
+.home-first-image {
+  margin-top: 100px;
+  justify-content: center;
+}
+.home-welcome {
+  text-align: center;
+  margin-top: 50px;
+  color: white;
+  font-size: 2rem;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 5%;
+}
+.home-welcome p {
+  font-size: 1.6rem;
 }
 
-.home-welcome p{
-    font-size: 1.6rem;
+.home-welcome Button {
+  font-family: "Inter", sans-serif;
+  font-weight: bolder;
+  padding: 10px;
+  width: 30rem;
+}
+.rent {
+  margin-top: 5px;
+  background-image: linear-gradient(to left, #000 40%, transparent 58%),
+    url("https://m.media-amazon.com/images/G/31/AmazonVideo/2021/X-site/MLP/TVOD/TVOD_MLP_Left.jpg");
+  background-repeat: no-repeat;
+  background-color: #000;
+  background-size: cover;
+  min-height: 690px;
+}
+.rent-text {
+  float: right;
+  margin-right: 1%;
+  margin-top: 15%;
+  color: white;
+  font-size: 2rem;
+  font-family: "Inter", sans-serif;
+}
+.rent-text p {
+  font-size: 1.5rem;
+  margin-bottom: 10%;
+}
+.rent Button {
+  padding: 10px;
+  width: 50%;
+}
+.image-grid {
+  margin-top: 2%;
+  padding: 20px;
+  background-color: white;
+  height: 700px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.home-welcome Button{
-    font-family: 'Inter', sans-serif;
-    font-weight: bolder;
-    padding:10px;
-    width: 50%;
+.image-grid-text {
+  margin-right: 5%;
+  margin-top: 10%;
+  color: black;
+  font-size: 2.2rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
-.youth-offers{
-    background-image: linear-gradient(to left, #000 40%, transparent 58%), url("https://m.media-amazon.com/images/G/31/AmazonVideo/MLP/Youth-Offer_24Jun._CB633858317_.jpg");
-    background-size: contain;
-    height: 500px;
-    width:100%;
-    position: relative;
-    top:700px;
-    background-repeat: no-repeat;
-    background-color: #000;
+
+.image-grid-text p {
+  text-align: center;
+  color: #282727e6;
+  font-size: 1.6rem;
+  font-weight: lighter;
+}
+.family {
+  background-image: linear-gradient(to right, #000 40%, transparent 58%),
+    url("https://m.media-amazon.com/images/G/01/digital/video/Magellan_MLP/IN-kids-30Jan._CB1517304519_.jpg");
+  margin-top: 5px;
+  background-repeat: no-repeat;
+  background-color: #000;
+  background-size: cover;
+  min-height: 580px;
+}
+.family-text {
+  position: relative;
+  top: 150px;
+  margin-left: 2%;
+  color: white;
+  font-size: 2.4rem;
+  font-family: "Inter", sans-serif;
+}
+.family-text p {
+  font-size: 1.6rem;
+  margin-bottom: 5%;
+  font-weight: 300;
+}
+.family-text Button {
+  padding: 3%;
+  width: 60%;
+}
+.fire-stick {
+  background-image: linear-gradient(to left, #000 40%, transparent 58%),
+    url("https://images-na.ssl-images-amazon.com/images/G/01/digital/video/Magellan_MLP/MLP_Template_Image_Left.jpg");
+  background-repeat: no-repeat;
+  background-color: #000;
+  background-size: cover;
+  min-height: 600px;
+}
+.fire-stick-text {
+  float: right;
+  margin-right: 3%;
+  margin-top: 7%;
+  color: white;
+  font-size: 2.4rem;
+  font-family: "Inter", sans-serif;
+}
+.fire-stick-text p {
+  font-size: 1.6rem;
+  margin-bottom: 8%;
+}
+.fire-stick-text Button {
+  padding: 3%;
+  width: 60%;
+}
+.footer {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 1rem;
+  width: auto;
+  padding: 1rem;
+  background-color: #343434;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.footer-text {
+  margin-top: 10px;
+  color: white;
+}
+.footer-text a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer-text a:hover {
+  color: blue;
 }

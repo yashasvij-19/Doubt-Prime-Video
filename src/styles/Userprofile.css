@@ -1,0 +1,41 @@
+.middleBox{
+    margin: 5%;
+}
+
+.middleBox-box{
+    border: 2px solid grey;
+    padding: 10px;
+}
+.box-first{
+    border-top: none;
+    display: flex;
+    justify-content: space-between;
+}
+.box{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px dotted grey;
+}
+.clickP{
+    cursor: pointer;
+}
+.clickP:hover{
+    font-size: large;
+}
+.foot{
+background-color: rgb(42, 41, 41) ;
+color: white;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 2%;
+margin: 0%;
+margin-left: -8px;
+margin-right: -7px;
+margin-bottom: -7px;
+}
+.foot-first{
+justify-content: center;
+align-items: center;
+text-align: center;
+}
