@@ -1,6 +1,7 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "../styles/Carousel.css";
+import { Link } from "react-router-dom";
 
 export default () => (
   <Carousel>
@@ -16,7 +17,9 @@ export default () => (
             alt="RARKPK"
           />
         </a>
-        <p>More Details</p>
+        <Link to="/content-details" style={{ textDecoration: "none" }}>
+          <p>More Details</p>
+        </Link>
         <i class="fa-solid fa-circle-plus"></i>
       </div>
     </div>
@@ -32,7 +35,9 @@ export default () => (
             alt="Jailer"
           />
         </a>
-        <p>More Details</p>
+        <Link to="/content-details" style={{ textDecoration: "none" }}>
+          <p>More Details</p>
+        </Link>
         <i class="fa-solid fa-circle-plus"></i>
       </div>
     </div>
@@ -48,7 +53,9 @@ export default () => (
             alt="Neeyat"
           />
         </a>
-        <p>More Details</p>
+        <Link to="/content-details" style={{ textDecoration: "none" }}>
+          <p>More Details</p>
+        </Link>
         <i class="fa-solid fa-circle-plus"></i>
       </div>
     </div>
@@ -64,7 +71,9 @@ export default () => (
             alt="SatyaPrem ki Katha"
           />
         </a>
-        <p>More Details</p>
+        <Link to="/content-details" style={{ textDecoration: "none" }}>
+          <p>More Details</p>
+        </Link>
         <i class="fa-solid fa-circle-plus"></i>
       </div>
     </div>
@@ -76,7 +85,9 @@ export default () => (
             alt="Pizza 3 The Mummy"
           />
         </a>
-        <p>More Details</p>
+        <Link to="/content-details" style={{ textDecoration: "none" }}>
+          <p>More Details</p>
+        </Link>
         <i class="fa-solid fa-circle-plus"></i>
       </div>
     </div>
@@ -91,7 +102,9 @@ export default () => (
             alt="Maaveeran"
           />
         </a>
-        <p>More Details</p>
+        <Link to="/content-details" style={{ textDecoration: "none" }}>
+          <p>More Details</p>
+        </Link>
         <i class="fa-solid fa-circle-plus"></i>
       </div>
     </div>
@@ -106,7 +119,9 @@ export default () => (
             alt="Maaveeran"
           />
         </a>
-        <p>More Details</p>
+        <Link to="/content-details" style={{ textDecoration: "none" }}>
+          <p>More Details</p>
+        </Link>
         <i class="fa-solid fa-circle-plus"></i>
       </div>
     </div>

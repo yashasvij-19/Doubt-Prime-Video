@@ -3,6 +3,7 @@ import "../styles/Register.css";
 import Button from "@mui/material/Button";
 
 const Register = () => {
+  const [error, setError] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -20,8 +21,7 @@ const Register = () => {
     e.preventDefault();
 
     if (password !== rePassword) {
-      console.error("Passwords do not match");
-      return;
+      setError("Passwords do not match");
     }
 
     try {
@@ -44,14 +44,15 @@ const Register = () => {
 
       if (response.ok) {
         const data = await response.json();
-        console.log("Registration success", data);
         localStorage.setItem(name, JSON.stringify(data));
       } else {
         const errorData = await response.json();
+        setError(errorData.message);
         console.error("Registration failed", errorData);
       }
     } catch (error) {
       console.error("Registration failed", error);
+      setError(error.message);
     }
   };
   return (
@@ -63,6 +64,7 @@ const Register = () => {
         />
       </div>
       <div className="theBox">
+        <span className="theBoxerror">{error}</span>
         <h3>Create account</h3>
         <label htmlFor="theName">Your name</label>
         <br />
@@ -73,6 +75,7 @@ const Register = () => {
           name="name"
           value={name}
           onChange={handleChange}
+          onFocus={() => setError("")}
         />
         <label for="emailInput">Enter your email address</label>
         <br />
@@ -119,28 +122,28 @@ const Register = () => {
         </p>
         <p>Already have an account? Sign In</p>
       </div>
-      <footer className="foot">
-        <div className="foot-first">
-          <a
-            href="https://www.primevideo.com/help/ref=av_auth_ter?nodeId=202064890"
-            target="_blank"
-          >
-            Terms and Privacy Notice
-          </a>
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          <a href="./Login.js" target="_blank">
-            Send us feedback
-          </a>
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          <a
-            href="https://www.primevideo.com/help/ref=av_auth_hp"
-            target="_blank"
-          >
-            Help
-          </a>
-        </div>
-        <p>© 1996-2023, Amazon.com, Inc. or its affiliates</p>
-      </footer>
+      <div className="theFoot">
+        <a
+          href="https://www.primevideo.com/help/ref=av_auth_ter?nodeId=202064890"
+          target="_blank"
+        >
+          Terms and Privacy Notice
+        </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="./Login.js" target="_blank">
+          Send us feedback
+        </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <a
+          href="https://www.primevideo.com/help/ref=av_auth_hp"
+          target="_blank"
+        >
+          Help
+        </a>
+        <br />
+        <br />
+        <span>© 1996-2023, Amazon.com, Inc. or its affiliates</span>
+      </div>
     </div>
   );
 };

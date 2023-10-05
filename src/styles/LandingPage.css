@@ -2,20 +2,22 @@
 body {
   margin: 0;
 }
-
+.home-main{
+  background-color: #000;
+}
 .home-first-image {
-  margin-top: 100px;
+  margin-top: 50px;
   justify-content: center;
 }
 .home-welcome {
   text-align: center;
-  margin-top: 50px;
   color: white;
   font-size: 2rem;
   font-family: "Inter", sans-serif;
   margin-bottom: 5%;
 }
 .home-welcome p {
+  margin-top: 30px;
   font-size: 1.6rem;
 }
 
@@ -44,7 +46,8 @@ body {
 }
 .rent-text p {
   font-size: 1.5rem;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
+  margin-top: 30px;
 }
 .rent Button {
   padding: 10px;
@@ -60,7 +63,7 @@ body {
 }
 
 .image-grid-text {
-  margin-right: 5%;
+  margin-right: 2%;
   margin-top: 10%;
   color: black;
   font-size: 2.2rem;
@@ -73,6 +76,7 @@ body {
   color: #282727e6;
   font-size: 1.6rem;
   font-weight: lighter;
+  margin-top: 30px;
 }
 .family {
   background-image: linear-gradient(to right, #000 40%, transparent 58%),
@@ -93,8 +97,8 @@ body {
 }
 .family-text p {
   font-size: 1.6rem;
-  margin-bottom: 5%;
   font-weight: 300;
+  margin-top: 30px;
 }
 .family-text Button {
   padding: 3%;
@@ -117,26 +121,26 @@ body {
   font-family: "Inter", sans-serif;
 }
 .fire-stick-text p {
+  margin-top: 30px;
   font-size: 1.6rem;
-  margin-bottom: 8%;
+  margin-bottom: 4%;
 }
 .fire-stick-text Button {
   padding: 3%;
   width: 60%;
 }
 .footer {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
   font-size: 1rem;
   width: auto;
   padding: 1rem;
+  height: 110px;
   background-color: #343434;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 .footer-text {
-  margin-top: 10px;
+  margin-top: 30px;
   color: white;
 }
 .footer-text a {

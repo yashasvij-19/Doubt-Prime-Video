@@ -14,6 +14,8 @@ const Userprofile = () => {
 
   const [isEditingName, setIsEditingName] = useState(false);
   const [newName, setNewName] = useState("");
+  const [isEditingPass, setIsEditingPass] = useState(false);
+  const [newPass, setNewPass] = useState("");
   const [isEditingPhone, setIsEditingPhone] = useState(false);
   const [newPhone, setNewPhone] = useState("");
   const [isEditingPay, setIsEditingPay] = useState(false);
@@ -32,6 +34,11 @@ const Userprofile = () => {
       console.log("User data not found in localStorage");
     }
   }, []);
+  const projectId = "f104bi07c490";
+
+  const headers = {
+    projectId: projectId,
+  };
 
   const updateUser = (updatedData) => {
     const userDataString = localStorage.getItem("Yashasvi");
@@ -66,6 +73,34 @@ const Userprofile = () => {
   const handleAdChange = () => {
     updateUser({ address: newAd });
     setIsEditingAd(false);
+  };
+  const apiUrl =
+    "https://academics.newtonschool.co/api/v1/user/updateMyPassword";
+  const handlePassChange = async () => {
+    updateUser({ password: newPass });
+    setIsEditingPass(false);
+    try {
+      const response = await fetch(apiUrl, {
+        method: "PATCH",
+        headers: headers,
+        body: {
+          name: userData.name,
+          email: userData.email,
+          passwordCurrent: "12345",
+          password: newPass,
+          appType: "ott",
+        },
+      });
+
+      if (response.ok) {
+        console.log("Password updated successfully");
+      } else {
+        const errorData = await response.json();
+        console.error("Password update failed:", errorData);
+      }
+    } catch (error) {
+      console.error("An error occurred:", error);
+    }
   };
 
   const handlePayChange = () => {
@@ -131,8 +166,23 @@ const Userprofile = () => {
             <p>Once registered, you cannot change your e-mail</p>
           </div>
           <div className="box">
-            <p>Password: ********</p>
-            <p className="clickP">Change Password</p>
+            {isEditingPass ? (
+              <>
+                <input
+                  type="password"
+                  value={newPass}
+                  onChange={(e) => setNewPass(e.target.value)}
+                />
+                <button onClick={handlePassChange}>Change</button>
+              </>
+            ) : (
+              <>
+                <p>Password: ********</p>
+                <p className="clickP" onClick={() => setIsEditingPass(true)}>
+                  Change Password
+                </p>
+              </>
+            )}
           </div>
           <div className="box">
             {isEditingAd ? (

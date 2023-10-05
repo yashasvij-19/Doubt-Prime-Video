@@ -1,13 +1,14 @@
 import React from "react";
-import "../styles/Home.css";
+import "../styles/LandingPage.css";
 import Navbar from "./Navbar";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
 import HomeCarousel from "./HomeCarousel";
 import HomeimageGrid from "./HomeimageGrid";
+import { Link } from "react-router-dom";
 
-const Home = () => {
+const LandingPage = () => {
   const BootstrapButton = styled(Button)({
     boxShadow: "none",
     textTransform: "none",
@@ -55,11 +56,13 @@ const Home = () => {
             Watch the latest movies, TV shows, and award-winning Amazon
             Originals
           </p>
-          <Stack direction="row" sx={{ justifyContent: "center" }}>
-            <BootstrapButton variant="contained" size="large">
-              Sign in to join Prime
-            </BootstrapButton>
-          </Stack>
+          <Link to="/login" style={{ textDecoration: "none" }}>
+            <Stack direction="row" sx={{ justifyContent: "center" }}>
+              <BootstrapButton variant="contained" size="large">
+                Sign in to join Prime
+              </BootstrapButton>
+            </Stack>
+          </Link>
         </div>
       </div>
       <div className="image-grid">
@@ -78,15 +81,17 @@ const Home = () => {
         <div className="rent-text">
           <h3>Movie rentals on Prime Video</h3>
           <p>Early Access to new movies, before digital subscription</p>
-          <Stack
-            direction="row"
-            spacing={2}
-            sx={{ width: 500, fontFamily: "monospace" }}
-          >
-            <BootstrapButton variant="contained" size="large">
-              Rent now
-            </BootstrapButton>
-          </Stack>
+          <Link to="/login" style={{ textDecoration: "none" }}>
+            <Stack
+              direction="row"
+              spacing={2}
+              sx={{ width: 500, fontFamily: "monospace" }}
+            >
+              <BootstrapButton variant="contained" size="large">
+                Rent now
+              </BootstrapButton>
+            </Stack>
+          </Link>
         </div>
       </div>
       <div className="family">
@@ -100,15 +105,18 @@ const Home = () => {
             Kids can enjoy popular TV shows like Peppa Pig, <br /> Powerpuff
             Girls, and Chhota Bheem.
           </p>
-          <Stack
-            direction="row"
-            spacing={2}
-            sx={{ width: 500, fontFamily: "monospace" }}
-          >
-            <BootstrapButton variant="contained" size="large">
-              Get Started
-            </BootstrapButton>
-          </Stack>
+          <Link to="/login" style={{ textDecoration: "none" }}>
+            {" "}
+            <Stack
+              direction="row"
+              spacing={2}
+              sx={{ width: 500, fontFamily: "monospace" }}
+            >
+              <BootstrapButton variant="contained" size="large">
+                Get Started
+              </BootstrapButton>
+            </Stack>
+          </Link>
         </div>
       </div>
       <div className="fire-stick">
@@ -121,15 +129,17 @@ const Home = () => {
             <br /> button on the remote and say the name of the title
             <br /> you want to watch to find it in seconds.
           </p>
-          <Stack
-            direction="row"
-            spacing={2}
-            sx={{ width: 500, fontFamily: "monospace" }}
-          >
-            <BootstrapButton variant="contained" size="large">
-              Get Started
-            </BootstrapButton>
-          </Stack>
+          <Link to="/login" style={{ textDecoration: "none" }}>
+            <Stack
+              direction="row"
+              spacing={2}
+              sx={{ width: 500, fontFamily: "monospace" }}
+            >
+              <BootstrapButton variant="contained" size="large">
+                Get Started
+              </BootstrapButton>
+            </Stack>
+          </Link>
         </div>
       </div>
       <div className="footer">
@@ -162,4 +172,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default LandingPage;

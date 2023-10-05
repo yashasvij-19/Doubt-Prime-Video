@@ -25,6 +25,7 @@ const MovieSlider = ({ el }) => {
 
         const data = await response.json();
         const shows = data.data;
+        console.log(shows);
 
         setMovies(shows);
         setTotalPages(10);
@@ -53,10 +54,8 @@ const MovieSlider = ({ el }) => {
 
   const toggleWatchlist = (movie) => {
     if (watchlist.includes(movie.id)) {
-      // Remove from watchlist
       setWatchlist(watchlist.filter((id) => id !== movie.id));
     } else {
-      // Add to watchlist
       setWatchlist([...watchlist, movie.id]);
     }
   };

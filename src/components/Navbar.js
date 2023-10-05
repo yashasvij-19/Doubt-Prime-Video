@@ -3,11 +3,23 @@ import "../styles/Navbar.css";
 import AccountMenu from "./AccountMenu";
 import MenuHome from "./MenuHome";
 import MenuCat from "./MenuCat";
+import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import UserAccountMenu from "./UserAccountMenu";
 
 const Navbar = () => {
+  const [searchInput, setSearchInput] = useState("");
+  const navigate = useNavigate();
+  const handleSearch = () => {
+    if (searchInput.trim() !== "") {
+      navigate(`/search-results/${searchInput}`);
+    }
+  };
+
   const Search = styled("div")(({ theme }) => ({
     position: "relative",
     borderRadius: theme.shape.borderRadius,
@@ -24,15 +36,6 @@ const Navbar = () => {
     },
   }));
 
-  const SearchIconWrapper = styled("div")(({ theme }) => ({
-    padding: theme.spacing(0, 2),
-    height: "100%",
-    position: "absolute",
-    pointerEvents: "none",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  }));
   const StyledInputBase = styled(InputBase)(({ theme }) => ({
     color: "inherit",
     "& .MuiInputBase-input": {
@@ -83,17 +86,25 @@ const Navbar = () => {
             <li id="searchList">
               {" "}
               <Search>
-                <SearchIconWrapper>
-                  <SearchIcon />
-                </SearchIconWrapper>
                 <StyledInputBase
                   placeholder="Search…"
-                  inputProps={{ "aria-label": "search" }}
+                  value={searchInput}
+                  onChange={(e) => {
+                    setSearchInput(e.target.value);
+                    console.log(e.target.value);
+                  }}
                 />
+                <IconButton
+                  aria-label="search"
+                  color="primary"
+                  onClick={handleSearch}
+                >
+                  <SearchIcon />
+                </IconButton>
               </Search>
             </li>
           </ul>
-          <AccountMenu />
+          <UserAccountMenu />
         </div>
       </div>
     </div>

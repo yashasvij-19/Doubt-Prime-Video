@@ -3,18 +3,13 @@ import Box from "@mui/material/Box";
 import Avatar from "@mui/material/Avatar";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
 import Tooltip from "@mui/material/Tooltip";
-import PersonAdd from "@mui/icons-material/PersonAdd";
-import Settings from "@mui/icons-material/Settings";
-import Logout from "@mui/icons-material/Logout";
+
 import "../styles/Navbar.css";
 import { Link } from "react-router-dom";
 
-export default function AccountMenu() {
+export default function UserAccountMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -77,13 +72,15 @@ export default function AccountMenu() {
         transformOrigin={{ horizontal: "right", vertical: "top" }}
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
-        <Link to="/login" style={{ textDecoration: "none" }}>
-          <MenuItem id="signIn">Sign In</MenuItem>
+        <Link to="/user-profile" style={{ textDecoration: "none" }}>
+          <MenuItem id="signIn">My Account</MenuItem>
         </Link>
-        <Link to="/register" style={{ textDecoration: "none" }}>
-          <MenuItem id="signIn">Register</MenuItem>
+        <Link to="/watchlist" style={{ textDecoration: "none" }}>
+          <MenuItem id="signIn">Watchlist</MenuItem>
         </Link>
-        <MenuItem onClick={handleClose}>Watch Anywhere</MenuItem>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <MenuItem id="signIn">Sign Out</MenuItem>
+        </Link>
       </Menu>
     </React.Fragment>
   );
